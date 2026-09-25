@@ -1,0 +1,408 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Body */
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 850px;
+    max-width: 95%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2d3436;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+header p {
+    color: #636e72;
+    font-size: 1.1em;
+}
+
+
+/* Search Container */
+
+/* Search Container */
+
+.search-container {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+/* Search Input */
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 20px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1em;
+    color: #2d3436;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #636e72;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+
+/* Search Button */
+
+button {
+    padding: 12px 25px;
+    background: #667eea;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* Result Container */
+
+#result {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+
+/* Hidden */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Countries Grid */
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: 380px;
+    justify-content: center;
+    gap: 25px;
+    width: fit-content;
+}
+
+/* Country Card */
+
+/* Country Card */
+
+.country-card {
+    width: 380px;
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+
+/* Flag Container */
+
+.flag-container {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f6f8;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+
+/* Country Flag */
+
+.country-flag {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin: auto;
+}
+
+
+/* Flag Fallback */
+
+.flag-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+
+/* Country Name */
+
+.country-name {
+    text-align: center;
+    color: #2d3436;
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+
+/* Country Information */
+
+.country-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+
+/* Information Item */
+
+.info-item {
+    min-width: 0;
+    min-height: 80px;
+    padding: 14px 10px;
+    background: #f5f6f8;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Information Title */
+
+.info-item h3 {
+    color: #2d3436;
+    font-size: 0.95em;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+
+/* Information Text */
+
+.info-item p {
+    color: #636e72;
+    font-size: 0.9em;
+    line-height: 1.4;
+    text-align: center;
+    word-break: break-word;
+}
+
+
+/* Loading */
+
+.loading {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    color: #667eea;
+    font-size: 1.2em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.loading i {
+    margin-right: 8px;
+}
+
+
+/* Error */
+
+.error {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.error i {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.error h3 {
+    color: #2d3436;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.error p {
+    color: #636e72;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .countries-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+   /* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2d3436;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+header p {
+    color: #636e72;
+    font-size: 1.1em;
+}
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .countries-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .country-card {
+        max-width: 380px;
+        padding: 18px;
+    }
+
+    .flag-container {
+        height: 180px;
+    }
+
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 400px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.7em;
+    }
+
+    .country-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .info-item {
+        padding: 10px 8px;
+        min-height: 75px;
+    }
+
+    .info-item h3 {
+        font-size: 0.85em;
+    }
+
+    .info-item p {
+        font-size: 0.8em;
+    }
+
+    .flag-container {
+        height: 160px;
+    }
+
+}
